@@ -33,9 +33,11 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        fontFamily: 'Raleway',
         useMaterial3: true,
       ),
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -81,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
   //   });
   // }
 
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -91,125 +92,175 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
+      // appBar: AppBar(
+      //   // TRY THIS: Try changing the color here to a specific color (to
+      //   // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
+      //   // change color while the other colors stay the same.
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   // Here we take the value from the MyHomePage object that was created by
+      //   // the App.build method, and use it to set our appbar title.
+      //   title: Text(widget.title),
+      // ),
+
+      body:
+
+          // Center(
+          //   // Center is a layout widget. It takes a single child and positions it
+          //   // in the middle of the parent.
+          //   child: Column(
+          //     // Column is also a layout widget. It takes a list of children and
+          //     // arranges them vertically. By default, it sizes itself to fit its
+          //     // children horizontally, and tries to be as tall as its parent.
+          //     //
+          //     // Column has various properties to control how it sizes itself and
+          //     // how it positions its children. Here we use mainAxisAlignment to
+          //     // center the children vertically; the main axis here is the vertical
+          //     // axis because Columns are vertical (the cross axis would be
+          //     // horizontal).
+          //     //
+          //     // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+          //     // action in the IDE, or press "p" in the console), to see the
+          //     // wireframe for each widget.
+          //     mainAxisAlignment: MainAxisAlignment.center,
+          //     children: <Widget>[
+          //       // Image.asset('assets/images/android_logo.png')
+          //       // Image.network('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
+          //       // Padding(
+          //       //     padding: const EdgeInsets.all(8.0),
+          //       //     child: Text('Стандартный текст',
+          //       //         style: TextStyle(
+          //       //           fontSize: 20,
+          //       //         ))),
+          //       // Padding(
+          //       //     padding: const EdgeInsets.all(8.0),
+          //       //     child: Text('Comfortaa текст',
+          //       //         style: TextStyle(
+          //       //           fontFamily: 'Comfortaa',
+          //       //           fontSize: 20,
+          //       //           fontWeight: FontWeight.bold
+          //       //         ))),
+          //       // Text.rich(TextSpan(
+          //       //     style: TextStyle(color: Colors.amberAccent),
+          //       //     children: [
+          //       //       TextSpan(text: 'First '),
+          //       //       TextSpan(
+          //       //           text: 'Second',
+          //       //           style: TextStyle(
+          //       //               color: Colors.red, fontWeight: FontWeight.w700)),
+          //       //     ]))
+          //       // Container(
+          //       //   height: 100,
+          //       //   // padding: EdgeInsets.all(20),
+          //       //   constraints: BoxConstraints(
+          //       //     maxWidth: 200,
+          //       //     maxHeight: 100,
+          //       //   ),
+          //       //   decoration: BoxDecoration(
+          //       //     color: Colors.black,
+          //       //     image: DecorationImage(image: NetworkImage('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'),
+          //       //     fit: BoxFit.contain
+          //       //     )
+          //       //   ),
+          //       // )
+          //       //   ConstrainedBox(
+          //       //   constraints: BoxConstraints(
+          //       //       //maxWidth: 200,
+          //       //       ),
+          //       //   child: Text(
+          //       //       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
+          //       // )
+          //       // SizedBox(
+          //       //   //width: 100,
+          //       //   //height: 25,
+          //       //   child: Text(
+          //       //       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
+          //       // )
           //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
+          //       //Text('${Uuid().v1()}'),
           //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Image.asset('assets/images/android_logo.png')
-            // Image.network('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
-            // Padding(
-            //     padding: const EdgeInsets.all(8.0),
-            //     child: Text('Стандартный текст',
-            //         style: TextStyle(
-            //           fontSize: 20,
-            //         ))),
-            // Padding(
-            //     padding: const EdgeInsets.all(8.0),
-            //     child: Text('Comfortaa текст',
-            //         style: TextStyle(
-            //           fontFamily: 'Comfortaa',
-            //           fontSize: 20,
-            //         ))),
-            // Text.rich(TextSpan(
-            //     style: TextStyle(color: Colors.amberAccent),
-            //     children: [
-            //       TextSpan(text: 'First '),
-            //       TextSpan(
-            //           text: 'Second',
-            //           style: TextStyle(
-            //               color: Colors.red, fontWeight: FontWeight.w700)),
-            //     ]))
-            // Container(
-            //   height: 100,
-            //   // padding: EdgeInsets.all(20),
-            //   constraints: BoxConstraints(
-            //     maxWidth: 200,
-            //     maxHeight: 100,
-            //   ),
-            //   decoration: BoxDecoration(
-            //     color: Colors.black,
-            //     image: DecorationImage(image: NetworkImage('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'),
-            //     fit: BoxFit.contain
-            //     )
-            //   ),
-            // )
-            //   ConstrainedBox(
-            //   constraints: BoxConstraints(
-            //       //maxWidth: 200,
-            //       ),
-            //   child: Text(
-            //       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
-            // )
-            // SizedBox(
-            //   //width: 100,
-            //   //height: 25,
-            //   child: Text(
-            //       'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
-            // )
+          //       // SizedBox(
+          //       //             //   width: 200.0,
+          //       //             //   height: 100.0,
+          //       //             //   child: Shimmer.fromColors(
+          //       //             //     baseColor: Colors.black,
+          //       //             //     highlightColor: Colors.red,
+          //       //             //     child: Text(
+          //       //             //       'Shimmer',
+          //       //             //       textAlign: TextAlign.center,
+          //       //             //       style: TextStyle(
+          //       //             //         fontSize: 40.0,
+          //       //             //         fontWeight: FontWeight.bold,
+          //       //             //       ),
+          //       //             //     ),
+          //       //             //   ),
+          //       //             // ),
+          //
+          //       // SingleChildScrollView(
+          //       //   controller: controller,
+          //       //   child: Column(
+          //       //     children: [
+          //       //       Text('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
+          //       //   for(final item in fakeData(100, true)) item,
+          //       //       Text('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
+          //       //     ],
+          //       //   )
+          //       //)
+          //
+          //     ],
+          //
+          //
+          //   ),
+          // ),
 
-            //Text('${Uuid().v1()}'),
-
-            // SizedBox(
-            //             //   width: 200.0,
-            //             //   height: 100.0,
-            //             //   child: Shimmer.fromColors(
-            //             //     baseColor: Colors.black,
-            //             //     highlightColor: Colors.red,
-            //             //     child: Text(
-            //             //       'Shimmer',
-            //             //       textAlign: TextAlign.center,
-            //             //       style: TextStyle(
-            //             //         fontSize: 40.0,
-            //             //         fontWeight: FontWeight.bold,
-            //             //       ),
-            //             //     ),
-            //             //   ),
-            //             // ),
-
-            // SingleChildScrollView(
-            //   controller: controller,
-            //   child: Column(
-            //     children: [
-            //       Text('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
-            //   for(final item in fakeData(100, true)) item,
-            //       Text('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'),
-            //     ],
-            //   )
-            //)
-
-          ],
-
-
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          CustomScrollView(
+        slivers: <Widget>[
+          // SliverAppBar
+          SliverAppBar(
+            backgroundColor: Colors.blueGrey,
+            expandedHeight: 200.0,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                'Просмотр фото', // Title text for the SliverAppBar
+                style: TextStyle(color: Colors.white),
+              ),
+              background: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Отпуск',
+                      style: TextStyle(color: Colors.white, fontSize: 50),
+                    ),
+                    SizedBox(width: 10),
+                    const FaIcon(
+                      FontAwesomeIcons.earthEurope,
+                      size: 40,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          // SliverList
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                int i = index + 1;
+                return Container(
+                  padding: EdgeInsets.all(8), // Border width
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset('assets/images/image_$i.jpg'),
+                  ),
+                );
+              },
+              childCount: 6, // Number of list items
+            ),
+          ),
+        ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
